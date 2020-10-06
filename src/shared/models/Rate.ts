@@ -1,7 +1,7 @@
 import { Currencies } from '../enums/Currencies';
 
 type Rate = {
-  at: Date;
+  at: string;
   currencyRates: Record<Currencies, number>;
   base: Currencies;
 };

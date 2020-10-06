@@ -3,8 +3,8 @@ import Rate from './Rate';
 
 type ExchangeRateHistory = {
   rates: Rate[];
-  startAt: Date;
-  endAt: Date;
+  startAt: string;
+  endAt: string;
 };
 
 export default ExchangeRateHistory;
@@ -17,14 +17,14 @@ export class ExchangeRateHistoryModel {
     for (const rateDate in rates) {
       rateModels.push({
         base,
-        at: new Date(rateDate),
+        at: rateDate,
         currencyRates: rates[rateDate],
       });
     }
     return {
       rates: rateModels,
-      startAt: new Date(start_at),
-      endAt: new Date(end_at),
+      startAt: start_at,
+      endAt: end_at,
     };
   }
 }
