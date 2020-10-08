@@ -23,7 +23,7 @@ type Props = {
 export default function ExchangeField(props: Props): JSX.Element {
   const { value, currency, onChange, onCurrencyChange } = props;
   return (
-    <Grid container direction="row" justify="center" alignItems="flex-end">
+    <Grid container direction="row" alignItems="flex-end" justify="center">
       <TextField
         id="standard-basic"
         label="Money"
